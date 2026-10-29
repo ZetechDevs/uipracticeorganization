@@ -1,43 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="@drawable/round"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:gravity="center"
-        android:text="A llitle sweet treat" />
-
-        android:text="TextView" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="412dp"
+        android:layout_height="735dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="409dp"
-            android:layout_height="681dp"
+            android:layout_width="411dp"
+            android:layout_height="731dp"
             android:background="@drawable/baked_goods_2"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="1dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
             <SearchView
                 android:id="@+id/searchView"
                 android:layout_width="335dp"
                 android:layout_height="42dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="88dp"
                 android:background="@drawable/round"
                 android:foreground="@drawable/round"
-                android:hint="Search"
+                android:hint="@string/Search"
                 android:inputType="textPersonName"
                 android:textAlignment="center"
 
@@ -47,13 +45,95 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <FrameLayout
-                android:layout_width="372dp"
                 android:id="@+id/glass"
+                android:layout_width="372dp"
                 android:layout_height="496dp"
                 android:background="@drawable/round"
-                tools:layout_editor_absoluteX="20dp"
-                tools:layout_editor_absoluteY="134dp"/>
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.567"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchView"
+                app:layout_constraintVertical_bias="0.457">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:id="@+id/textView4"
+                        android:layout_width="154dp"
+                        android:layout_height="31dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/roundDark"
+                        android:gravity="center"
+                        android:text="@string/menu"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="366dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="156dp"
+                        android:layout_height="81dp"
+                        android:layout_marginStart="44dp"
+                        android:layout_marginTop="32dp"
+                        android:background="@drawable/roundDark"
+                        android:padding="8dp"
+
+                        android:text="@string/description"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.209"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="82dp"
+                        android:layout_height="78dp"
+                        android:layout_marginStart="28dp"
+
+                        android:layout_marginTop="44dp"
+                        android:background="@drawable/roundDark"
+                        android:contentDescription="@string/description"
+                        android:src="@drawable/baked_goods_1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="378dp"
+                android:layout_height="49dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round"
+                android:gravity="center"
+                android:text="@string/business_title"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/searchView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.484"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
