@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/round"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:text="A llitle sweet treat" />
+
+        android:text="TextView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="409dp"
+            android:layout_height="681dp"
+            android:background="@drawable/baked_goods_2"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
+
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="335dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/round"
+                android:foreground="@drawable/round"
+                android:hint="Search"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <FrameLayout
+                android:layout_width="372dp"
+                android:id="@+id/glass"
+                android:layout_height="496dp"
+                android:background="@drawable/round"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="134dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
