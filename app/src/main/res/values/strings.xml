@@ -9,8 +9,9 @@
     <string name="image3_description">Cake</string>
     <string name="results_placeholder">(Results will appear here)</string>
     <string name="business_title">A little sweet treat</string>
-    <string name="Search">Search</string>
+    <string name="Search">Search here</string>
     <string name="menu">Our Menu</string>
     <string name="cupcakes">Cupcakes</string>
     <string name="description">Premium cupcake with chocolate and vanilla experience at ksh 50</string>
+    <string name="description1">Premium mini snack cake  with toppings and decoration at ksh 200</string>
 </resources>
